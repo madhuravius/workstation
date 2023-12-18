@@ -10,6 +10,7 @@ Vagrant.configure('2') do |config|
   config.vm.box = 'debian/bookworm64'
   config.vm.box_check_update = true
   config.vm.hostname = 'workstation'
+  config.vm.define 'workstation'
   config.vm.provider 'virtualbox' do |d|
     d.name = 'workstation'
     d.memory = '3072'
