@@ -17,6 +17,7 @@ ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 
+source ~/.asdf/asdf.sh
 asdf plugin add bun
 asdf plugin add crystal
 asdf plugin add elixir
@@ -27,8 +28,6 @@ asdf plugin add nodejs
 asdf plugin add ruby
 asdf plugin add python
 asdf plugin add terraform
-
-pip install -r requirements.txt
 
 # absolutely necessary for editor deps
 asdf install golang 1.21.5
@@ -46,5 +45,7 @@ asdf global ruby 3.1.3
 asdf reshim
 
 pip install -r /vagrant/vagrant/requirements.txt
+
+asdf reshim
 
 cp /vagrant/vagrant/fish.config ~/.config/fish/config.fish

@@ -15,5 +15,7 @@ Vagrant.configure('2') do |config|
     d.memory = '3072'
   end
 
+  config.vm.provision :docker
+
   config.vm.provision :shell, path: 'vagrant/bootstrap.sh'
 end

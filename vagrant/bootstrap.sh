@@ -29,7 +29,7 @@ chown -R madhu:madhu /home/madhu
 echo "%madhu ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/madhu
 
 mkdir /usr/local/share/ca-certificates/self-signed
-cp /vagrant/certificates/root.ca /usr/local/share/ca-certificates/self-signed/root.crt
+cp /vagrant/certificates/root.crt /usr/local/share/ca-certificates/self-signed/root.crt
 update-ca-certificates
 
 /bin/su -s /bin/bash -c '/vagrant/vagrant/workspace.sh' madhu
