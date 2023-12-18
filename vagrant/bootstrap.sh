@@ -23,6 +23,7 @@ mv nvim.appimage /usr/local/bin/nvim
 chmod +x /usr/local/bin/nvim
 
 useradd -m -s /bin/bash -U madhu -u 666
+usermod -aG docker madhu
 passwd -d madhu
 cp -pr /home/vagrant/.ssh /home/madhu/
 chown -R madhu:madhu /home/madhu
