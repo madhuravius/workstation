@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Set up user workspace so everything is present to work.
+
 echo "Running as: $USER"
 
 git config --global user.name "Madhusudan Ravi"
