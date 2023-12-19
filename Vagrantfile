@@ -22,7 +22,7 @@ Vagrant.configure('2') do |config|
   config.vm.provision :docker
   config.vm.provision :shell, path: 'vagrant/bootstrap.sh'
 
-  # only mount this if path exists
+  # only mount this if path exists and only when ssh'ing, otherwise not needed
   if Dir.exist?(WORK_PATH)
     config.vm.synced_folder WORK_PATH,
                             '/home/madhu/work/',

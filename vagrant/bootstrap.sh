@@ -29,7 +29,8 @@ apt-get install -y \
 	zip \
 	zlib1g-dev
 
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+# install nvim, must be nightly
+curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
 mv nvim.appimage /usr/local/bin/nvim
 chmod +x /usr/local/bin/nvim
 

@@ -9,6 +9,10 @@ git config --global user.email "madhuravius@protonmail.com"
 git config --global init.defaultBranch "main"
 
 chsh -s $(which fish)
+# set up autocomplete
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+omf install z
+
 git clone https://github.com/madhuravius/nvim.git ~/.config/nvim || true
 
 echo "cacert=/etc/ssl/certs/ca-certificates.crt" >> ~/.curlrc
