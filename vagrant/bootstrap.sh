@@ -3,6 +3,7 @@
 # Set up the root account with base deps on the machine for reuse.
 
 DEBIAN_FRONTEND=noninteractive
+ZELLIJ_VERSION=0.39.2
 
 apt-get update 
 apt-get install -y \
@@ -33,6 +34,11 @@ apt-get install -y \
 curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
 mv nvim.appimage /usr/local/bin/nvim
 chmod +x /usr/local/bin/nvim
+
+# install zellij
+wget https://github.com/zellij-org/zellij/releases/download/v$ZELLIJ_VERSION/zellij-x86_64-unknown-linux-musl.tar.gz
+tar -xvf ./zellij-x86_64-unknown-linux-musl.tar.gz
+mv ./zellij /usr/local/bin/zellij
 
 useradd -m -s /bin/bash -U madhu -u 666
 usermod -aG docker madhu
