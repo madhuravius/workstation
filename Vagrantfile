@@ -9,11 +9,22 @@ WORK_PATH = "#{Dir.home}/work/".freeze
 Vagrant.configure('2') do |config|
   config.ssh.username = 'madhu' if IS_SSH
   config.ssh.forward_agent = true
+  config.timezone.value = :host if Vagrant.has_plugin?('vagrant-timezone')
+
+  # if resizing, will want to do the following after: vagrant halt && vagrant up
+  # 1. use this to resize partition with free space:
+  #   sudo cfdisk /dev/sda
+  # 2. use this to resize fs and verify with df after:
+  #   sudo resize2fs -p -F /dev/sda1
+  config.disksize.size = '40GB'
 
   config.vm.box = 'debian/bookworm64'
   config.vm.box_check_update = true
   config.vm.hostname = 'workstation'
   config.vm.define 'workstation'
+
+  config.vm.network 'forwarded_port', guest: 80, host: 8080, host_ip: '127.0.0.1', auto_correct: true
+
   config.vm.provider 'virtualbox' do |d|
     d.name = 'workstation'
     d.memory = '4096'

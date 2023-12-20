@@ -7,6 +7,7 @@ ZELLIJ_VERSION=0.39.2
 
 apt-get update 
 apt-get install -y \
+	bat \
 	btop \
 	build-essential \
 	ca-certificates \
