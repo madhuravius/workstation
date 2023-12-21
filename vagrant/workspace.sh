@@ -8,10 +8,14 @@ git config --global user.name "Madhusudan Ravi"
 git config --global user.email "madhuravius@protonmail.com"
 git config --global init.defaultBranch "main"
 
+
 chsh -s $(which fish)
 # set up autocomplete
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 omf install z
+
+sudo echo "elevating permissions to install nix"
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
 
 git clone https://github.com/madhuravius/nvim.git ~/.config/nvim || true
 
