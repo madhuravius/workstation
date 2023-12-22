@@ -12,8 +12,10 @@ apt-get install -y \
 	build-essential \
 	ca-certificates \
 	curl \
+	fzf \
 	fish \
 	fuse \
+	git \
 	libbz2-dev \
 	liblzma-dev \
 	libncurses5-dev \
@@ -25,7 +27,7 @@ apt-get install -y \
 	llvm \
 	neofetch \
 	python3-pip \
-	git \
+	ripgrep \
 	sudo \
 	wget \
 	zip \

@@ -11,8 +11,10 @@ git config --global init.defaultBranch "main"
 
 chsh -s $(which fish)
 # set up autocomplete
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-omf install z
+cd /home/$USER
+curl -L https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > install_omf && chmod +x ./install_omf
+fish install_omf --noninteractive
+fish -c "omf install z"
 
 sudo echo "elevating permissions to install nix"
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
@@ -34,6 +36,7 @@ asdf plugin add elixir
 asdf plugin add erlang
 asdf plugin add golang
 asdf plugin add java
+asdf plugin add maven
 asdf plugin add nodejs
 asdf plugin add ruby
 asdf plugin add python
@@ -43,6 +46,9 @@ asdf plugin add terraform
 asdf install golang 1.21.5
 asdf global golang 1.21.5
 
+asdf install java openjdk-21.0.1
+asdf global java openjdk-21.0.1
+
 asdf install nodejs 20.10.0
 asdf global nodejs 20.10.0
 
@@ -51,6 +57,9 @@ asdf global python 3.11.6
 
 asdf install ruby 3.1.3
 asdf global ruby 3.1.3
+
+asdf install maven 3.9.6
+asdf global maven 3.9.6
 
 asdf reshim
 

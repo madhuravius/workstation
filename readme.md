@@ -17,6 +17,9 @@ Basic usage:
 # spin it up
 vagrant up
 
+# reload it to mount relative dirs
+vagrant reload
+
 # use the box
 vagrant ssh
 
