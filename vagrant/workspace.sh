@@ -35,9 +35,11 @@ asdf plugin add crystal
 asdf plugin add elixir
 asdf plugin add erlang
 asdf plugin add golang
+asdf plugin add gradle
 asdf plugin add java
 asdf plugin add maven
 asdf plugin add nodejs
+asdf plugin add nomad
 asdf plugin add ruby
 asdf plugin add python
 asdf plugin add terraform
@@ -60,6 +62,9 @@ asdf global ruby 3.1.3
 
 asdf install maven 3.9.6
 asdf global maven 3.9.6
+
+asdf install nomad latest
+asdf global nomad latest
 
 asdf reshim
 

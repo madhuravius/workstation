@@ -20,7 +20,9 @@ Vagrant.configure('2') do |config|
   config.vm.box = 'debian/bookworm64'
   config.vm.define :workstation
   config.vm.hostname = 'workstation'
-  config.vm.network :forwarded_port, guest: 80, host: 8080, host_ip: '127.0.0.1', auto_correct: true
+  (9000..9100).each do |i|
+    config.vm.network :forwarded_port, guest: i, host: i, host_ip: '127.0.0.1', auto_correct: true
+  end
 
   config.vm.boot_timeout = 60
   config.vm.provider 'virtualbox' do |d|
