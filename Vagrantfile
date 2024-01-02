@@ -7,7 +7,7 @@ IS_SSH = ARGV[0] = 'ssh'
 WORK_PATH = "#{Dir.home}/work/".freeze
 
 Vagrant.configure('2') do |config|
-  config.timezone.value = :host if Vagrant.has_plugin?('vagrant-timezone')
+  config.timezone.value = 'UTC' if Vagrant.has_plugin?('vagrant-timezone')
   config.ssh.forward_agent = true
 
   # if resizing, will want to do the following after: vagrant halt && vagrant up
