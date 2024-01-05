@@ -21,7 +21,7 @@ Vagrant.configure('2') do |config|
   config.vm.define :workstation
   config.vm.hostname = 'workstation'
   (9000..9100).each do |i|
-    config.vm.network :forwarded_port, guest: i, host: i, host_ip: '127.0.0.1', auto_correct: true
+    config.vm.network :forwarded_port, guest: i, host: i, host_ip: '127.0.0.1'
   end
 
   config.vm.boot_timeout = 60

@@ -20,8 +20,8 @@ vagrant up
 # reload it to mount relative dirs
 vagrant reload
 
-# use the box
-vagrant ssh
+# use the box (with display for clipboard support)
+vagrant ssh -- -X
 
 # rebuild if needed 
 vagrant reload --provision
@@ -29,3 +29,10 @@ vagrant reload --provision
 # put it to sleep when done
 vagrant suspend
 ```
+
+## Common Issues
+
+Daily reboots are required for some reason or system clock will drift (ex: putting host to sleep and waking it up 3 days later).
+
+SSH with `-- -X` and you will have access to clipboard for common copy pasting activities (ex: nvim).
+
