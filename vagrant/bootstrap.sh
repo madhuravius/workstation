@@ -17,16 +17,21 @@ apt-get install -y \
 	fuse \
 	git \
 	libbz2-dev \
+	libevent-dev \
 	liblzma-dev \
 	libncurses5-dev \
 	libncursesw5-dev \
+	libffi-dev \
+	libgmp-dev \
 	libreadline-dev \
 	libssl-dev \
-	libffi-dev \
+	libpcre2-dev \
 	libsqlite3-dev \
+	libyaml-dev \
 	llvm \
 	neofetch \
 	python3-pip \
+	sqlite3 \
 	ripgrep \
 	sudo \
 	wget \
