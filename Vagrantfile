@@ -27,7 +27,8 @@ Vagrant.configure('2') do |config|
   config.vm.boot_timeout = 60
   config.vm.provider 'virtualbox' do |d|
     d.name = 'workstation'
-    d.memory = '4096'
+    d.memory = '6144'
+    d.cpus = 4
   end
 
   config.vm.provision :docker

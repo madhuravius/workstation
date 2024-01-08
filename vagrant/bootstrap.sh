@@ -35,6 +35,7 @@ apt-get install -y \
 	ripgrep \
 	sudo \
 	wget \
+	xclip \
 	zip \
 	zlib1g-dev
 
