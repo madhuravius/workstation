@@ -9,6 +9,8 @@ This requires the following plugins: `vagrant-timezone` and `vagrant-disksize`.
 vagrant plugin install vagrant-timezone
 # needed for resizing disk
 vagrant plugin install vagrant-disksize
+# needed for loading dependencies
+vagrant plugin install vagrant-dotenv
 ```
 
 Basic usage:
