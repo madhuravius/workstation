@@ -40,8 +40,8 @@ apt-get install -y \
 	zlib1g-dev
 
 # install nvim, must be nightly
-curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
-mv nvim.appimage /usr/local/bin/nvim
+curl -LO https://github.com/neovim/neovim/releases/download/v0.11.0/nvim-linux-x86_64.appimage
+mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 chmod +x /usr/local/bin/nvim
 
 # install zellij
