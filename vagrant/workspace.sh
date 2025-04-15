@@ -23,13 +23,14 @@ git clone https://github.com/madhuravius/nvim.git ~/.config/nvim || true
 
 echo "cacert=/etc/ssl/certs/ca-certificates.crt" >> ~/.curlrc
 
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+wget https://github.com/asdf-vm/asdf/releases/download/v0.16.7/asdf-v0.16.7-linux-amd64.tar.gz
+tar -xvf ./asdf-v0.16.7-linux-amd64.tar.gz
+sudo mv asdf /usr/local/bin/
+
 mkdir -p ~/.config/fish/completions
-ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 
-source ~/.asdf/asdf.sh
 asdf plugin add bun
 asdf plugin add crystal
 asdf plugin add elixir
@@ -45,26 +46,29 @@ asdf plugin add python
 asdf plugin add terraform
 
 # absolutely necessary for editor deps
+asdf install bun latest
+asdf set --home bun latest
+
 asdf install golang 1.24.0
-asdf global golang 1.24.0
+asdf set --home golang 1.24.0
 
 asdf install java openjdk-21.0.1
-asdf global java openjdk-21.0.1
+asdf set --home java openjdk-21.0.1
 
 asdf install nodejs 22.14.0
-asdf global nodejs 22.14.0
+asdf set --home nodejs 22.14.0
 
 asdf install python 3.13.2
-asdf global python 3.13.2
+asdf set --home python 3.13.2
 
 asdf install ruby 3.3.5
-asdf global ruby 3.3.5
+asdf set --home ruby 3.3.5
 
 asdf install maven 3.9.6
-asdf global maven 3.9.6
+asdf set --home maven 3.9.6
 
 asdf install nomad latest
-asdf global nomad latest
+asdf set --home nomad latest
 
 asdf reshim
 
