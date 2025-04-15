@@ -38,3 +38,5 @@ Daily reboots are required for some reason or system clock will drift (ex: putti
 
 SSH with `-- -X` and you will have access to clipboard for common copy pasting activities (ex: nvim).
 
+If stuck with `workstation: Warning: Authentication failure. Retrying...`, find the `insecure_private_key`, typically
+in the home dir's `.vagrant` path and destroy that file. Then `vagrant halt`, `vagrant destroy`, and `vagrant up`.

@@ -15,10 +15,10 @@ def configure_vm_networking(config)
 end
 
 def configure_vm(config)
-  config.vm.box = 'debian/bookworm64'
+  config.vm.box = 'ubuntu/jammy64'
   configure_vm_networking config
 
-  config.vm.boot_timeout = 60
+  config.vm.boot_timeout = 600
   config.vm.provider 'virtualbox' do |d|
     d.name = 'workstation'
     d.memory = '6144'
