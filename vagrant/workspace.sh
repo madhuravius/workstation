@@ -45,20 +45,20 @@ asdf plugin add python
 asdf plugin add terraform
 
 # absolutely necessary for editor deps
-asdf install golang 1.21.5
-asdf global golang 1.21.5
+asdf install golang 1.24.0
+asdf global golang 1.24.0
 
 asdf install java openjdk-21.0.1
 asdf global java openjdk-21.0.1
 
-asdf install nodejs 20.10.0
-asdf global nodejs 20.10.0
+asdf install nodejs 22.14.0
+asdf global nodejs 22.14.0
 
-asdf install python 3.11.6
-asdf global python 3.11.6
+asdf install python 3.13.2
+asdf global python 3.13.2
 
-asdf install ruby 3.1.3
-asdf global ruby 3.1.3
+asdf install ruby 3.3.5
+asdf global ruby 3.3.5
 
 asdf install maven 3.9.6
 asdf global maven 3.9.6
