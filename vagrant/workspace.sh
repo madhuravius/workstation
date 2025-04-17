@@ -74,3 +74,5 @@ pip install -r /vagrant/vagrant/requirements.txt
 asdf reshim
 
 cp /vagrant/vagrant/fish.config ~/.config/fish/config.fish
+
+nvim --headless "+Lazy! sync" +qa
