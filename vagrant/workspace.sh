@@ -24,6 +24,9 @@ wget https://github.com/asdf-vm/asdf/releases/download/v0.16.7/asdf-v0.16.7-linu
 tar -xvf ./asdf-v0.16.7-linux-amd64.tar.gz
 sudo mv asdf /usr/local/bin/
 
+# enables docker-compose for legacy projects but with v2
+curl -fL https://raw.githubusercontent.com/docker/compose-switch/master/install_on_linux.sh | sh
+
 mkdir -p ~/.config/fish/completions
 
 curl https://sh.rustup.rs -sSf | sh -s -- -y
